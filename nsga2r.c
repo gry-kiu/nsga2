@@ -1,17 +1,16 @@
-# include "rand.h"
-# include "nsga2.h"
+#include "nsga2.h"
+#include "rand.h"
 
-int main(int argc, char **argv)
-{
-	/* code */
-	NSGA2Type nsga2Params;
-	void *inp = NULL;
-	void *out = NULL;
+int main(int argc, char **argv) {
+  /* code */
+  NSGA2Type nsga2Params;
+  void *inp = NULL;
+  void *out = NULL;
 
-	nsga2Params = ReadParameters(argc, argv);
+  nsga2Params = ReadParameters(argc, argv);
 
-	InitNSGA2(&nsga2Params, inp, out);
-	NSGA2(&nsga2Params, inp, out);
+  InitNSGA2(&nsga2Params, inp, out);
+  NSGA2(&nsga2Params, inp, out);
 
-	return 0;
+  return 0;
 }
